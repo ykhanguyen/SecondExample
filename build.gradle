@@ -5,9 +5,11 @@ buildscript {
     repositories {
         mavenLocal()
         maven { url "https://repo.grails.org/grails/core" }
+	maven { url "http://dl.bintray.com/osreadplugins/plugins" } 
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
+	compile "org.grails.plugins:MetaFunctionality:0.1"
     }
 }
 
