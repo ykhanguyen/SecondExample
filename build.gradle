@@ -9,7 +9,6 @@ buildscript {
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
-	compile "org.grails.plugins:MetaFunctionality:0.1"
     }
 }
 
@@ -61,7 +60,8 @@ dependencies {
     provided "org.grails:grails-web-boot"
     provided "org.grails:grails-dependencies"
     provided 'javax.servlet:javax.servlet-api:3.1.0'
-
+	
+	compile "org.grails.plugins:MetaFunctionality:0.1"
     testCompile "org.grails:grails-plugin-testing"
 
     console "org.grails:grails-console"
@@ -69,4 +69,21 @@ dependencies {
 
 task wrapper(type: Wrapper) {
     gradleVersion = gradleWrapperVersion
+}
+
+bintray {
+    user = "ykhanguyen"
+    key = "1a1099739a549f2248f8a2eb5f2d7ecc58f81993"
+    publications = ['maven']
+    publish = true
+    pkg {
+        userOrg = 'osreadplugins'
+        name = "SecondExample"
+        issueTrackerUrl = "https://github.com/ykhanguyen/SecondExample/issues" 
+        vcsUrl = "https://github.com/ykhanguyen/grails-SecondExample"
+        version {
+            attributes = ['grails-plugin': "org.osread:SecondExample"]
+            name = 0.1
+        }
+    }
 }
