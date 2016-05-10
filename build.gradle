@@ -74,8 +74,8 @@ task wrapper(type: Wrapper) {
 }
 
 bintray {
-    user = "ykhanguyen"
-    key = "1a1099739a549f2248f8a2eb5f2d7ecc58f81993"
+    user = "kestingj"
+    key = "220879280370678ff1268431655ae24255e5ec94"
     publications = ['maven']
     publish = true
     pkg {
