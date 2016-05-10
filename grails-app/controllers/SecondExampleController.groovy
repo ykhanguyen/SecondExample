@@ -18,7 +18,7 @@ class SecondExampleController {
 
   	  output.valueRows = params.data
 
- 	   Module m = Module.findByModuleIP(params.modID)//load from saveModuleService
+ 	   Module m = Module.findByModuleIP(params.id)//load from saveModuleService
  	   if (m.outputIDs != null) {
 	        m.outputIDs.add(output.moduleDataID)
  	   } else {
