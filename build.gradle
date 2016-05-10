@@ -85,7 +85,7 @@ bintray {
         vcsUrl = "https://github.com/ykhanguyen/grails-SecondExample"
         version {
             attributes = ['grails-plugin': "org.osread:SecondExample"]
-            name = 0.1
+            name = 0.2
         }
     }
 }
