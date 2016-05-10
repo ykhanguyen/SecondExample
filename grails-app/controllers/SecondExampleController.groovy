@@ -27,8 +27,12 @@ class SecondExampleController {
    	 output.type = "SecondExample"
    	 m.save(flush: true)
   	 output.save(flush: true)
-
+	render(view: "submit")
    	 //redirect to learner home
- 	 redirect(controller: "appforliteracy.FileOutput", action: "output", params:     [id: output.moduleDataID])
+ 	 //redirect(controller: "appforliteracy.FileOutput", action: "output", params:     [id: output.moduleDataID])
+	
+    def logout() {
+        redirect(controller:"Login", action:"index")
+    }
 }
 }
