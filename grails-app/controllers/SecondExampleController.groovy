@@ -31,8 +31,8 @@ class SecondExampleController {
    	 //redirect to learner home
  	 //redirect(controller: "appforliteracy.FileOutput", action: "output", params:     [id: output.moduleDataID])
 	
-    def logout() {
+}
+  def logout() {
         redirect(controller:"Login", action:"index")
     }
-}
 }
